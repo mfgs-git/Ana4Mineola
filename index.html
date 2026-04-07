@@ -344,6 +344,21 @@
         grid-template-columns: 1fr;
       }
 
+      #share .card > div[style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+        text-align: center !important;
+      }
+
+      .hero {
+        padding-top: 32px;
+      }
+
+      .topbar-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
       .hero {
         padding-top: 32px;
       }
@@ -483,6 +498,96 @@
         </div>
       </div>
     </section>
+
+    <section id="share">
+      <div class="wrap">
+        <div class="card" style="text-align:center;">
+          <h3>Share the Campaign</h3>
+          <p>Help spread the word. Share this campaign with friends, family, and neighbors.</p>
+
+          <div class="cta-row" style="justify-content:center;">
+
+            <a class="btn btn-primary" href="https://www.facebook.com/sharer/sharer.php?u=https://mfgs-git.github.io/Ana4Mineola/" target="_blank" rel="noopener noreferrer">
+              <span style="display:inline-flex;align-items:center;gap:8px;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7h-2.5V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.3c-1.3 0-1.7.8-1.7 1.6V12h2.9l-.5 2.9h-2.4v7A10 10 0 0 0 22 12"/></svg>
+                Facebook
+              </span>
+            </a>
+
+            <a class="btn btn-primary" href="https://twitter.com/intent/tweet?url=https://mfgs-git.github.io/Ana4Mineola/&text=Support%20Ana%20Senra-Silva%20for%20Mineola%20Board%20of%20Education.%20Transparency,%20Accountability,%20and%20a%20Strong%20Community%20Voice.%20Vote%20May%2019!" target="_blank" rel="noopener noreferrer">
+              <span style="display:inline-flex;align-items:center;gap:8px;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M18 2h3l-7 8 8 12h-6l-5-7-6 7H2l8-9-8-11h6l5 6 5-6z"/></svg>
+                Share on X
+              </span>
+            </a>
+
+            <a class="btn btn-secondary" href="sms:?&body=Please%20support%20Ana%20Senra-Silva%20for%20Mineola%20Board%20of%20Education%20on%20May%2019.%20Learn%20more:%20https://mfgs-git.github.io/Ana4Mineola/">
+              <span style="display:inline-flex;align-items:center;gap:8px;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H8l-4 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm3 5v2h10V9H7zm0 4v2h7v-2H7z"/></svg>
+                Send by Text
+              </span>
+            </a>
+
+            <button class="btn btn-secondary" onclick="copyLink()" type="button">
+              <span style="display:inline-flex;align-items:center;gap:8px;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.9 12a5 5 0 0 1 5-5h3v2h-3a3 3 0 0 0 0 6h3v2h-3a5 5 0 0 1-5-5zm6.1 1h4v-2h-4v2zm5-6h-3v2h3a3 3 0 1 1 0 6h-3v2h3a5 5 0 1 0 0-10z"/></svg>
+                Copy Link
+              </span>
+            </button>
+
+            <a class="btn btn-secondary" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+              <span style="display:inline-flex;align-items:center;gap:8px;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm5 5a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm6.5-.8a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/></svg>
+                Instagram
+              </span>
+            </a>
+
+          </div>
+
+          <div style="margin-top:28px; display:grid; grid-template-columns: 1.1fr 0.9fr; gap:22px; align-items:center; text-align:left;">
+            <div>
+              <h3 style="margin-bottom:10px;">Scan and Share</h3>
+              <p style="margin-top:0;">Use the QR code below on flyers, posts, and printed materials so voters can quickly visit the campaign website.</p>
+              <div class="cta-row" style="justify-content:flex-start; margin-top:14px;">
+                <a class="btn btn-primary" href="ana_qrcode_home.png" download>Download QR Code</a>
+              </div>
+            </div>
+            <div style="text-align:center;">
+              <img src="ana_qrcode_home.png" alt="QR code linking to the Ana Senra-Silva campaign website" style="max-width:220px; width:100%; background:#fff; border-radius:22px; padding:14px; box-shadow: var(--shadow);">
+              <div style="font-weight:800; margin-top:10px; color:var(--navy); letter-spacing:0.04em; text-transform:uppercase;">Scan to Learn More</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function copyLink() {
+        const url = 'https://mfgs-git.github.io/Ana4Mineola/';
+        navigator.clipboard.writeText(url).then(function () {
+          const notice = document.getElementById('shareNotice');
+          if (notice) {
+            notice.textContent = 'Link copied! Share it with your community.';
+            notice.style.opacity = '1';
+            setTimeout(function () { notice.style.opacity = '0'; }, 2200);
+          }
+        }).catch(function () {
+          alert('Link copied: ' + url);
+        });
+      }
+
+      (function () {
+        const buttons = document.querySelectorAll('#share a, #share button');
+        buttons.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            console.log('Campaign share click:', (btn.textContent || '').trim());
+          });
+        });
+      })();
+    </script>
+
+    <div id="shareNotice" style="position:fixed; left:50%; bottom:24px; transform:translateX(-50%); background:var(--navy); color:#fff; padding:12px 18px; border-radius:999px; box-shadow:var(--shadow); opacity:0; transition:opacity 0.25s ease; z-index:999; font-weight:700;"></div>
+
   </main>
 
   <footer>
