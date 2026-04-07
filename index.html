@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ana Senra-Silva, MSEd | Mineola Board of Education</title>
+  <meta name="description" content="Vote Ana Senra-Silva, MSEd for Mineola Board of Education. Putting students first with transparency, accountability, and a community voice." />
+  <style>
+    :root {
+      --navy: #12307f;
+      --red: #ee1b3a;
+      --light: #f5f5f7;
+      --mid: #e7e7eb;
+      --text: #19316f;
+      --white: #ffffff;
+      --shadow: 0 18px 50px rgba(18, 48, 127, 0.12);
+      --radius: 24px;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background:
+        linear-gradient(90deg, transparent 0 8%, rgba(0,0,0,0.04) 8% 22%, transparent 22% 100%),
+        var(--light);
+      line-height: 1.45;
+    }
+
+    a { color: inherit; }
+
+    .wrap {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      background: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(18, 48, 127, 0.08);
+      backdrop-filter: blur(8px);
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 0;
+    }
+
+    .brand {
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      font-size: 1rem;
+      color: var(--navy);
+      text-decoration: none;
+    }
+
+    .brand span {
+      color: var(--red);
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--navy);
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 14px 20px;
+      border-radius: 999px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 24px rgba(18, 48, 127, 0.12);
+    }
+
+    .btn-primary {
+      background: var(--red);
+      color: var(--white);
+    }
+
+    .btn-secondary {
+      background: var(--white);
+      color: var(--navy);
+      border: 2px solid var(--navy);
+    }
+
+    .hero {
+      padding: 56px 0 34px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      background: var(--red);
+      color: var(--white);
+      font-weight: 800;
+      padding: 10px 16px;
+      border-radius: 999px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: clamp(2.6rem, 8vw, 5.8rem);
+      line-height: 0.95;
+      margin: 0;
+      color: var(--navy);
+      letter-spacing: 0.01em;
+    }
+
+    .namebar {
+      display: inline-block;
+      background: var(--red);
+      color: var(--white);
+      font-size: clamp(1rem, 2.5vw, 1.6rem);
+      font-weight: 800;
+      padding: 12px 16px;
+      margin: 16px 0 18px;
+      letter-spacing: 0.02em;
+    }
+
+    .subtitle {
+      font-size: clamp(1.2rem, 2.8vw, 2rem);
+      font-weight: 700;
+      max-width: 18ch;
+      margin: 0 0 16px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .tagline {
+      font-size: clamp(1.3rem, 3vw, 2rem);
+      font-weight: 900;
+      color: var(--red);
+      margin: 22px 0 14px;
+      text-transform: uppercase;
+    }
+
+    .points {
+      display: grid;
+      gap: 12px;
+      margin: 26px 0 30px;
+    }
+
+    .point {
+      background: var(--white);
+      border-left: 8px solid var(--red);
+      border-radius: 16px;
+      padding: 16px 18px;
+      font-weight: 800;
+      font-size: clamp(1rem, 2vw, 1.22rem);
+      box-shadow: var(--shadow);
+      text-transform: uppercase;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    .hero-card {
+      background: var(--white);
+      border-radius: 32px;
+      padding: 18px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before,
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      border-radius: 999px;
+      opacity: 0.08;
+    }
+
+    .hero-card::before {
+      width: 180px;
+      height: 180px;
+      background: var(--red);
+      top: -50px;
+      right: -40px;
+    }
+
+    .hero-card::after {
+      width: 150px;
+      height: 150px;
+      background: var(--navy);
+      bottom: -55px;
+      left: -35px;
+    }
+
+    .flyer-img {
+      width: 100%;
+      border-radius: 24px;
+      display: block;
+      position: relative;
+      z-index: 1;
+    }
+
+    section {
+      padding: 28px 0;
+    }
+
+    .section-title {
+      font-size: clamp(1.7rem, 4vw, 2.5rem);
+      margin: 0 0 18px;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      margin: 0 0 14px;
+      color: var(--red);
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .vote-box {
+      border: 3px solid var(--navy);
+      background: linear-gradient(180deg, #fff 0%, #f9fbff 100%);
+    }
+
+    .vote-box strong {
+      display: block;
+      color: var(--navy);
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
+
+    .vote-box .date {
+      color: var(--navy);
+      font-weight: 900;
+      font-size: clamp(1.3rem, 3vw, 2rem);
+      margin-top: 12px;
+      text-transform: uppercase;
+    }
+
+    .vote-box .hours {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      color: var(--navy);
+    }
+
+    .issues {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .issue {
+      background: var(--white);
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      border-top: 8px solid var(--red);
+    }
+
+    .issue h3 {
+      margin: 0 0 10px;
+      color: var(--navy);
+      text-transform: uppercase;
+      font-size: 1.12rem;
+    }
+
+    .issue p {
+      margin: 0;
+      color: #345;
+    }
+
+    footer {
+      padding: 34px 0 50px;
+      color: var(--navy);
+    }
+
+    .footer-box {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .small {
+      font-size: 0.94rem;
+      opacity: 0.85;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .info-grid,
+      .issues {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 32px;
+      }
+
+      .topbar-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .wrap {
+        width: min(calc(100% - 20px), var(--max));
+      }
+
+      .card,
+      .issue,
+      .hero-card {
+        padding: 18px;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      .cta-row .btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#top">VOTE <span>ANA</span></a>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#priorities">Priorities</a>
+        <a href="#vote">Vote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Mineola Board of Education</div>
+          <h1>VOTE</h1>
+          <div class="namebar">ANA SENRA-SILVA, MSEd</div>
+          <p class="subtitle">For Mineola Board of Education</p>
+          <p class="tagline">Putting Students First</p>
+
+          <div class="points" aria-label="Campaign priorities">
+            <div class="point">Transparency</div>
+            <div class="point">Accountability</div>
+            <div class="point">A Community Voice</div>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#vote">Voting Information</a>
+            <a class="btn btn-secondary" href="#priorities">Campaign Priorities</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <img class="flyer-img" src="e80d841c-bbd7-4537-a069-44f86604e444.png" alt="Campaign flyer for Ana Senra-Silva, MSEd for Mineola Board of Education" />
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap info-grid">
+        <div class="card">
+          <h3>Campaign Message</h3>
+          <p>
+            This site is based on the campaign flyer and keeps the message simple and direct:
+            putting students first while supporting transparency, accountability, and a strong
+            community voice in Mineola.
+          </p>
+        </div>
+
+        <div class="card vote-box" id="vote">
+          <h3>Voting Information</h3>
+          <strong>Voting Location:</strong>
+          <div>Synergy Building</div>
+          <div>2400 Jericho Turnpike</div>
+          <div>Garden City Park, NY</div>
+          <div class="date">Tuesday, May 19, 2026</div>
+          <div class="hours">6:00 A.M. – 9:00 P.M.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="priorities">
+      <div class="wrap">
+        <h2 class="section-title">Priorities</h2>
+        <div class="issues">
+          <article class="issue">
+            <h3>Transparency</h3>
+            <p>Clear communication and open decision-making help build trust with families and the community.</p>
+          </article>
+
+          <article class="issue">
+            <h3>Accountability</h3>
+            <p>Strong oversight and responsible leadership help ensure decisions stay focused on students.</p>
+          </article>
+
+          <article class="issue">
+            <h3>A Community Voice</h3>
+            <p>Parents, residents, and stakeholders deserve to be heard in the future of the district.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-box">
+        <div>Vote Ana Senra-Silva, MSEd for Mineola Board of Education</div>
+        <p class="small">To publish on GitHub Pages, upload this file as <strong>index.html</strong> and keep the flyer image in the same repository folder.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
